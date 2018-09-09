@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test_ajax">
+<head>
+    <meta charset="UTF-8">
+    <script src='angular.js'></script>
+    <script src='jquery-3.3.1.min.js'></script>
+    <title>Document</title>
+    <script>
+        let mod = angular.module('test_ajax',[]);
+
+        mod.controller('main', function($scope,$http){
+            // $scope.arr = [12,5,8];
+        });
+        $.ajax({
+            url:"test.txt",
+            dataType:'json',
+            success(res){
+                alert(res);
+            },
+            error(){
+                alert('something wrong!');
+            }
+        })
+    </script>
+</head>
+<body ng-controller="main">
+    <ul>
+        <li ng-repeat="item in arr">{{item}}</li>
+    </ul>
+</body>
+</html>

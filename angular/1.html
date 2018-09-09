@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src='./angular.js'></script>
+    <script>
+      let mod = angular.module("test",[]);
+
+      mod.controller("main",function(){
+          alert(arguments.length);
+      });
+    </script>
+</head>
+<body ng-controller="main">
+    
+</body>
+</html>
