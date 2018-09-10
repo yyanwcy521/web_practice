@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title> 
+    <style>
+        canvas{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+    <script>
+        let c = document.querySelector("canvas");
+        let ctx = c.getContext("2d");
+
+        //线性渐变
+        let lgd = ctx.createLinearGradient(100,100,300,100);
+        lgd.addColorStop(0,"red");
+        lgd.addColorStop(0.2,'green');
+        lgd.addColorStop(0.4,'yellow');
+        lgd.addColorStop(0.8,'orange');
+        lgd.addColorStop(1,'gray');
+        ctx.strokeStyle = lgd;
+        
+        ctx.moveTo(100,100);
+        ctx.lineTo(300,100);
+        ctx.lineWidth = 10;
+        ctx.stroke();
+    </script>
+</body>
+</html>

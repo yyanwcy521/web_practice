@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title> 
+    <style>
+        canvas{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+    <script>
+        let c = document.querySelector("canvas");
+        let ctx = c.getContext("2d");
+
+        //画一个三角形
+        ctx.moveTo(100,100);
+        ctx.lineTo(100,300);
+        ctx.lineTo(400,300);
+        //ctx.lineTo(100,100);
+        ctx.closePath(); //闭合路径，最后一步回到起始点上使用
+
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 10;
+        ctx.stroke();
+    </script>
+</body>
+</html>

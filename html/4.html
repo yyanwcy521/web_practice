@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title> 
+    <style>
+        canvas{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+    <script>
+        let c = document.querySelector("canvas");
+        let ctx = c.getContext("2d");
+        ctx.moveTo(100,100);
+        ctx.lineTo(200,150);
+        ctx.lineTo(100,200);
+        ctx.strokeStyle = 'red';
+        ctx.lineJoin = "round" ;//miter 默认尖--- bevel 平
+        ctx.lineCap = 'round'; //butt 默认尖--- square
+
+        ctx.lineWidth = 10;
+        ctx.stroke();
+    </script>
+</body>
+</html>
