@@ -13,5 +13,25 @@
 </head>
 <body>
     <canvas width="500" height="500"></canvas>
+    <script>
+        let c=document.querySelector("canvas");
+        let ctx = c.getContext("2d");
+        ctx.moveTo(100,100);
+        ctx.lineTo(300,100);
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 10;
+        ctx.stroke();
+        ctx.beginPath();
+       
+
+       
+        ctx.moveTo(100,200);
+        ctx.lineTo(400,200);
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 20;
+        ctx.stroke();
+        ctx.beginPath();
+    
+    </script>
 </body>
 </html>
