@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title> 
+    <style>
+        canvas{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="800"></canvas>
+    <script>
+        let c = document.querySelector("canvas");
+        let ctx = c.getContext("2d");
+
+        ctx.moveTo(300,0);
+        ctx.lineTo(300,400);
+        ctx.stroke();
+
+        ctx.beginPath();
+
+        
+        ctx.moveTo(0,200);
+        ctx.lineTo(600,200);
+        ctx.stroke();
+
+
+        ctx.font = "50px 宋体";
+        ctx.textAlign = "center"; //水平
+        ctx.textBaseline = "middle";  //上下
+        ctx.shadowColor = "red";
+        ctx.shadowOffsetX = 5;
+        ctx.shadowOffsetY = 5;
+        ctx.shadowBlur = 5 ;
+        
+        ctx.strokeText('全网最帅',300,200);
+        ctx.fillText('全网最帅',300,200);
+        ctx.shadowColor = "red";
+
+
+    </script>
+</body>
+</html>

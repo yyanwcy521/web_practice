@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title> 
+    <style>
+        canvas{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+    <script>
+        let c = document.querySelector("canvas");
+        let ctx = c.getContext("2d");
+
+        //近向渐变
+        let lgd = ctx.createRadialGradient(200,150,50,200,150,100);
+        lgd.addColorStop(0,"red");
+        lgd.addColorStop(0.2,'green');
+        lgd.addColorStop(0.4,'yellow');
+        lgd.addColorStop(0.8,'orange');
+        lgd.addColorStop(1,'gray');
+        ctx.fillStyle = lgd;
+        
+        ctx.moveTo(100,50);
+        ctx.lineTo(300,50);
+        ctx.lineTo(300,300);
+        ctx.lineTo(100,300);
+        ctx.closePath();
+        ctx.fill();
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title> 
+    <style>
+        canvas{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+    <script>
+        let c = document.querySelector("canvas");
+        let ctx = c.getContext("2d");
+
+        let step = 5;
+        let x = 0;
+        let i = 0;
+        setInterval(function(){
+
+            ctx.clearRect(0,0,c.width,c.height)
+            ctx.fillStyle = "green";
+            ctx.fillRect(x,100,100,200);
+            ctx.stroke();
+            
+            x += i*step;
+            if(x > c.width - 100){
+                i=-1;
+            } else if(x<=0){
+                i=1;
+            }
+
+        },10);
+
+    </script>
+</body>
+</html>
