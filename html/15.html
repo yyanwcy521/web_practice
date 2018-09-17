@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p:target{
+            background-color: green;
+        }
+        p::selection{
+            background-color: yellow;
+        }
+        div::first-letter{
+            font-size: 30px;
+        }
+        div::first-line{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>南开腾讯南开腾讯南开腾讯南开腾讯南开腾讯</p>
+    <p>南开腾讯南开腾讯南开腾讯南开腾讯南开腾讯</p>
+    <p>南开腾讯南开腾讯南开腾讯南开腾讯南开腾讯</p>
+    <p id="four">南开腾讯南开腾讯南开腾讯南开腾讯南开腾讯</p>
+    <p>南开腾讯南开腾讯南开腾讯南开腾讯南开腾讯</p>
+    <p>南开腾讯南开腾讯南开腾讯南开腾讯南开腾讯</p>
+    <a href="#four">查找第四个</a>
+    <div>
+        南开腾讯南开腾讯南开腾讯南开腾讯南开腾讯
+    </div>
+</body>
+</html>

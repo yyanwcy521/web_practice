@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   <style>
+       .box{
+           width: 600px;
+           height: 500px;
+           background-color: pink;
+           margin: 0 auto;
+       }
+       .cls{
+           width: 200px;
+           height: 200px;
+           background-color: green;
+           margin: 0 auto;
+           font-size: 100px;
+           text-align: center;
+       }
+       /* 2D转换 */
+       .box:hover  .cls{
+           /*横坐标便偏移 */
+           /* transform: translate(-100px); */
+           /* 横纵坐标偏移 */
+           /* transform: translate(100px,100px); */
+           /* 旋转，参数是角度 */
+           /* transform: rotate(60deg); */
+           /* 缩放，一个参数，二个参数都可行 */
+           /* transform: scale(0.2,1); */
+           /* 倾斜 第一个参数x,第二个参数是y */
+           transform:skew(30deg,30deg);
+
+       }
+   </style>
+</head>
+<body>
+    <div class="box">
+        <div class="cls">
+                    帅
+        </div>
+    </div>
+</body>
+</html>
