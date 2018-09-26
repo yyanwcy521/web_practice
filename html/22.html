@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div1{
+            width:0px;
+            height:0px;
+            border-top:100px dashed red;
+            border-left: 100px dashed black;
+            border-right: 100px dashed blue;
+            border-bottom: 100px dashed yellow;
+            border-radius: 50%;
+            
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+            
+            }
+            .div1:hover{
+                animation-play-state: paused;
+            }
+        @keyframes rotate{
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+</body>
+</html>
